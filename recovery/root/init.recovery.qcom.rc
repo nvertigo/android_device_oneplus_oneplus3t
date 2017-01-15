@@ -9,6 +9,11 @@ on boot
     # Enable sched boost
     write /proc/sys/kernel/sched_boost 1
 
+    # Enable dt2w
+    write /proc/touchpanel/double_tap_enable 1
+
+    start sbinqseecomd
+
 on enable-low-power
     # Disable thermal bcl hotplug to switch governor
     write /sys/module/msm_thermal/core_control/enabled 0
@@ -103,23 +108,18 @@ on enable-low-power
     # Set idle GPU to 133 Mhz
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
 
-on init
+on fs
     chmod 0660 /dev/qseecom
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
-    write /proc/touchpanel/double_tap_enable 1
 
 # separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
 service sbinqseecomd /sbin/qseecomd
-    oneshot
     disabled
     user root
     group root
     seclabel u:r:recovery:s0
-
-on property:ro.crypto.state=encrypted
-    start sbinqseecomd
 
 on property:init.svc.recovery=running
     trigger enable-low-power
