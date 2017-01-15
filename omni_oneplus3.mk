@@ -17,11 +17,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
-PRODUCT_NAME := lineage_oneplus3
+PRODUCT_NAME := omni_oneplus3
 PRODUCT_DEVICE := oneplus3
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -35,7 +34,3 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 TARGET_VENDOR_PRODUCT_NAME := OnePlus3
 TARGET_VENDOR_DEVICE_NAME := OnePlus3
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=OnePlus3 PRODUCT_NAME=OnePlus3
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=OnePlus/OnePlus3/OnePlus3:6.0.1/MMB29M/213690:user/release-keys \
-    PRIVATE_BUILD_DESC="OnePlus3-user 6.0.1 MMB29M 42 dev-keys"
