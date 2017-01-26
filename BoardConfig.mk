@@ -24,9 +24,9 @@
 # Inherit from oppo-common
 -include device/oppo/common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := OnePlus3,oneplus3,OnePlus3T,oneplus3t
+TARGET_OTA_ASSERT_DEVICE := OnePlus3,oneplus3t,OnePlus3T,oneplus3tt
 
-PLATFORM_PATH := device/oneplus/oneplus3
+PLATFORM_PATH := device/oneplus/oneplus3t
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
@@ -71,7 +71,7 @@ TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8996
-TARGET_KERNEL_CONFIG := lineageos_oneplus3_defconfig
+TARGET_KERNEL_CONFIG := lineageos_oneplus3t_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
@@ -164,8 +164,8 @@ USE_DEVICE_SPECIFIC_GPS := true
 
 # Init
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_oneplus3
-TARGET_RECOVERY_DEVICE_MODULES := libinit_oneplus3
+TARGET_INIT_VENDOR_LIB := libinit_oneplus3t
+TARGET_RECOVERY_DEVICE_MODULES := libinit_oneplus3t
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Keystore
@@ -228,4 +228,4 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/oneplus/oneplus3/BoardConfigVendor.mk
+-include vendor/oneplus/oneplus3t/BoardConfigVendor.mk

@@ -5,7 +5,7 @@ Copyright (C) 2017 - The LineageOS Project
 Device configuration for OnePlus 3
 ==============
 
-The OnePlus 3 (codenamed _"oneplus3"_) is a high-end smartphone from OnePlus.
+The OnePlus 3 (codenamed _"oneplus3t"_) is a high-end smartphone from OnePlus.
 
 It was announced in February 2016. Release date was June 2016.
 
@@ -27,4 +27,4 @@ It was announced in February 2016. Release date was June 2016.
 
 ## Device picture
 
-![OnePlus 3](https://content.oneplus.net/skin/frontend/oneplus2015/default/images/oneplus3/oxygenos/parameter.png "OnePlus 3 in grey")
+![OnePlus 3](https://content.oneplus.net/skin/frontend/oneplus2015/default/images/oneplus3t/oxygenos/parameter.png "OnePlus 3 in grey")
