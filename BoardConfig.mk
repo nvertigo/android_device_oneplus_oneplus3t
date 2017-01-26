@@ -24,13 +24,15 @@
 # Inherit from oppo-common
 -include device/oppo/common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := oneplus3t,OnePlus3T
-
 PLATFORM_PATH := device/oneplus/oneplus3t
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 BOARD_VENDOR := oneplus
+
+# Assertions
+TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
+TARGET_OTA_ASSERT_DEVICE := OnePlus3T,oneplus3t
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
