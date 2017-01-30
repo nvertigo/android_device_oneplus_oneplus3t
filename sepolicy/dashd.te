@@ -14,8 +14,8 @@ binder_use(dashd)
 binder_service(dashd)
 binder_call(dashd, system_server)
 
-# Write to state file.
-allow dashd sysfs:file write;
+# Read from and write to state file.
+allow dashd sysfs:file { read open write };
 
 ###
 ### dashd: charger mode
