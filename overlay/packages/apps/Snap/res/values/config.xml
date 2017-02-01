@@ -29,7 +29,7 @@
          will be enabled ONLY for these scenemodes and disabled for others.
          Here's a hack to disable longshot. -->
     <string-array name="longshot_scenemodes">
-        <item>placeholder</item>
+        <item>sports</item>
     </string-array>
 
     <!-- Opens front camera using openLegacy() and forces api v1 -->
