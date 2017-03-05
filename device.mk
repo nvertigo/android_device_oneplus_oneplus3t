@@ -175,7 +175,12 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8996 \
     memtrack.msm8996 \
     liboverlay \
-    libtinyxml
+    libtinyxml \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service
 
 # Display calibration
 PRODUCT_PACKAGES += \
@@ -213,6 +218,10 @@ PRODUCT_COPY_FILES += \
 # High performance VR feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vr.high_performance.xml:system/etc/permissions/android.hardware.vr.high_performance.xml
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/vintf.xml:system/vendor/manifest.xml
 
 # IPv6
 PRODUCT_PACKAGES += \
