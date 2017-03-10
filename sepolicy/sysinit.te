@@ -1,1 +1,3 @@
 allow sysinit system_data_file:file { getattr read open};
+#============= sysinit ==============
+allow sysinit sysfs_devices_system_cpu:dir write;
