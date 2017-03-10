@@ -1,4 +1,5 @@
 allow untrusted_app rootfs:dir { read open };
 allow untrusted_app sysfs:dir read;
+allow untrusted_app anr_data_file:file read;
 # address fc due to denial for fb manager
 allow untrusted_app lock_settings_service:service_manager find;
