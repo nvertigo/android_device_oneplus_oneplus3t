@@ -6,4 +6,5 @@ allow wcnss_service self:capability {
 };
 get_prop(wcnss_service, diag_prop);
 
-allow wcnss_service shell_exec:file execute;
+allow wcnss_service shell_exec:file { getattr open read execute execute_no_trans };
+allow wcnss_service toolbox_exec:file { getattr open read execute execute_no_trans };

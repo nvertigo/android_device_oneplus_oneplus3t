@@ -1,3 +1,8 @@
-allow sysinit system_data_file:file { getattr read open};
-#============= sysinit ==============
+allow sysinit system_data_file:dir write;
+allow sysinit system_data_file:file { getattr read open };
 allow sysinit sysfs_devices_system_cpu:dir write;
+allow sysinit storage_file:dir search;
+#============= sysinit ==============
+allow sysinit mnt_user_file:dir search;
+allow sysinit storage_file:lnk_file read;
+allow sysinit tmpfs:dir search;
