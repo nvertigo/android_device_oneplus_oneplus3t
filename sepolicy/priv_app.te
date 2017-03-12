@@ -1,1 +1,14 @@
 allow priv_app device:dir { read open };
+allow priv_app rfs_system_file:dir getattr;
+
+allow priv_app bt_firmware_file:dir { open read };
+allow priv_app bt_firmware_file:file getattr;
+allow priv_app cache_private_backup_file:dir getattr;
+allow priv_app configfs:dir { open read };
+allow priv_app configfs:file getattr;
+allow priv_app mnt_media_rw_file:dir getattr;
+allow priv_app persist_file:dir search;
+allow priv_app persist_file:file getattr;
+allow priv_app rfs_system_file:dir { open read };
+allow priv_app rfs_system_file:lnk_file { getattr read };
+allow priv_app tombstone_data_file:dir { getattr search };

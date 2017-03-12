@@ -1,2 +1,2 @@
 allow cameraserver adsprpcd_file:dir { getattr search read };
-allow cameraserver adsprpcd_file:file { read open };
+allow cameraserver adsprpcd_file:file { getattr read open };
