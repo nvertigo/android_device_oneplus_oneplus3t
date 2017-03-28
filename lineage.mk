@@ -33,5 +33,3 @@ TARGET_UNOFFICIAL_BUILD_ID := nvertigo
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 TARGET_VENDOR := oneplus
-
-WITH_SU := true
