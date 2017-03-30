@@ -239,6 +239,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjni_livedisplay
 
+# Magisk
+PRODUCT_PACKAGES += \
+    MagiskManager
+
+PRODUCT_COPY_FILES += \
+    vendor/magisk/magisk.zip:system/addon.d/magisk.zip
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
