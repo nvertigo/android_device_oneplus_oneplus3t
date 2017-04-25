@@ -70,8 +70,7 @@ on property:init.svc.bootanim=running
 on boot
     start rmt_storage
     start rfs_access
-
-    # access permission for secure touch
+# access permission for secure touch
     chmod 0660 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
     chmod 0440 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
     chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
@@ -210,11 +209,6 @@ on boot
     chmod 660 /sys/class/leds/rgb/rgb_blink
 
     setprop persist.camera.HAL3.enabled 0
-
-    # snd_soc_wcd9330: enable high performance mode
-    chown root system /sys/module/snd_soc_wcd9330/parameters/high_perf_mode
-    chmod 0660 /sys/module/snd_soc_wcd9330/parameters/high_perf_mode
-    write /sys/module/snd_soc_wcd9330/parameters/high_perf_mode 1
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
