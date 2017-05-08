@@ -225,5 +225,8 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# custom additions to updater-script
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/oneplus/oneplus3t/releasetools/ota_from_target_files
+
 # inherit from the proprietary version
 -include vendor/oneplus/oneplus3t/BoardConfigVendor.mk
