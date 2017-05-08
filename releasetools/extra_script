@@ -1,4 +1,16 @@
 ui_print(" ");
+ui_print("Preparing Magisk...");
+ui_print(" ");
+mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system", "");
+run_program("/sbin/busybox", "cp", "/system/addon.d/magisk.zip", "/tmp");
+delete("/system/addon.d/magisk.zip");
+unmount("/system");
+run_program("/sbin/busybox", "unzip", "/tmp/magisk.zip", "META-INF/com/google/android/*", "-d", "/tmp");
+ui_print(" ");
+ui_print("Flashing Magisk...");
+ui_print(" ");
+run_program("/sbin/sh", "/tmp/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/magisk.zip");
+ui_print(" ");
 ui_print("Welcome to NvertigoLOS!");
 ui_print("=======================");
 ui_print(" ");
