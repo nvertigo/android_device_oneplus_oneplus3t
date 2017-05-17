@@ -166,8 +166,8 @@ USE_DEVICE_SPECIFIC_GPS := true
 
 # Init
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_oneplus3t
-TARGET_RECOVERY_DEVICE_MODULES := libinit_oneplus3t
+TARGET_INIT_VENDOR_LIB := libinit_oneplus3
+TARGET_RECOVERY_DEVICE_MODULES := libinit_oneplus3
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Keystore
