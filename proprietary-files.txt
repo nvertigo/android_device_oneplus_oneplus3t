@@ -487,7 +487,6 @@ etc/firmware/tp/fw_synaptics_touchkey.img
 
 # OnePlusCamera, OnePlusCameraService, OnePlusGallery and required libs
 -priv-app/OnePlusCamera/OnePlusCamera.apk|50492d1be616a9949e0dec7cf75cfbf09c344099
--priv-app/OnePlusCameraService/OnePlusCameraService.apk|ef30910b6b1317659413424982284fc86e209132
 -priv-app/OnePlusGallery/OnePlusGallery.apk|eaedc37d995475ea1848c8599c641ef3a3a7a239
 lib64/libfilter-sdk.so
 lib64/libopbaselib.so
