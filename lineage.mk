@@ -28,7 +28,7 @@ PRODUCT_DEVICE := oneplus3t
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 
-TARGET_UNOFFICIAL_BUILD_ID := nvertigo
+TARGET_UNOFFICIAL_BUILD_ID := nvertigo-gps-test
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
