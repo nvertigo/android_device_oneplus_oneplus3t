@@ -7,3 +7,6 @@ allow system_server proc_stat:file r_file_perms;
 allow system_server remosaic_service:service_manager find;
 get_prop(system_server, diag_prop);
 allow system_server unlabeled:file unlink;
+
+# OMS
+allow system_server theme_data_file:dir relabelto;
