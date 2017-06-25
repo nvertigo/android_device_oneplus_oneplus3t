@@ -12,7 +12,7 @@
     <item name="dsp.video">89</item>
     <item name="camera.flashlight">79</item>
     <item name="camera.avg">470</item>
-    <item name="radio.active">365</item>
+    <item name="radio.active">118</item>
     <item name="radio.scanning">1</item>
     <item name="gps.on">36</item>
     <array name="radio.on">
