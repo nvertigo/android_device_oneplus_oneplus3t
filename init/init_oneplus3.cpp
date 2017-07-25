@@ -145,7 +145,7 @@ void vendor_load_properties() {
     case 22:
         /* Europe / Asia model */
         load_op3t("ONEPLUS A3003");
-        property_set("ro.telephony.default_network", "9");
+        property_set("ro.telephony.default_network", "22");
         break;
     case 32:
         /* North America model */
