@@ -1,1 +1,2 @@
 require version-modem=2017-07-14 14:51:01
+require display-series=OnePlus 3T

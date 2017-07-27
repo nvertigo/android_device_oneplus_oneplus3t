@@ -32,7 +32,7 @@ BOARD_VENDOR := oneplus
 
 # Assertions
 TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := OnePlus3T,oneplus3t
+TARGET_OTA_ASSERT_DEVICE := OnePlus3,oneplus3,OnePlus3T,oneplus3t
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
@@ -194,7 +194,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_op3
-TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)/releasetools
+# custom additions to updater-script
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := $(TARGET_RELEASETOOLS_EXTENSIONS)/ota_from_target_files
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
@@ -219,9 +221,6 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-# custom additions to updater-script
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/oneplus/oneplus3t/releasetools/ota_from_target_files
 
 # inherit from the proprietary version
 -include vendor/oneplus/oneplus3t/BoardConfigVendor.mk
