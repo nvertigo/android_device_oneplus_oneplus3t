@@ -126,6 +126,7 @@ void vendor_load_properties() {
     case 31:
         /* China / North America model */
         load_op3("ONEPLUS A3000");
+        property_set("ro.display.series", "OnePlus 3");
         property_set("ro.telephony.default_network", "22");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("persist.radio.force_on_dc", "true");
@@ -133,11 +134,13 @@ void vendor_load_properties() {
     case 21:
         /* Europe / Asia model */
         load_op3("ONEPLUS A3003");
+        property_set("ro.display.series", "OnePlus 3");
         property_set("ro.telephony.default_network", "9");
         break;
     case 12:
         /* China model */
         load_op3t("ONEPLUS A3010");
+        property_set("ro.display.series", "OnePlus 3T");
         property_set("ro.telephony.default_network", "22");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("persist.radio.force_on_dc", "true");
@@ -145,11 +148,13 @@ void vendor_load_properties() {
     case 22:
         /* Europe / Asia model */
         load_op3t("ONEPLUS A3003");
+        property_set("ro.display.series", "OnePlus 3T");
         property_set("ro.telephony.default_network", "9");
         break;
     case 32:
         /* North America model */
         load_op3t("ONEPLUS A3000");
+        property_set("ro.display.series", "OnePlus 3T");
         property_set("ro.telephony.default_network", "22");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("persist.radio.force_on_dc", "true");

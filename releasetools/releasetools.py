@@ -19,10 +19,12 @@ import common
 import re
 
 def FullOTA_Assertions(info):
+  AddDisplaySeriesAssertion(info)
   AddModemAssertion(info)
   return
 
 def IncrementalOTA_Assertions(info):
+  AddDisplaySeriesAssertion(info)
   AddModemAssertion(info)
   return
 
@@ -32,6 +34,20 @@ def AddModemAssertion(info):
   if m:
     version = m.group(1).rstrip()
     if len(version) and '*' not in version:
-      cmd = 'assert(op3.verify_modem("' + version + '") == "1");'
+      cmd = 'assert(op3.verify_modem("' + version + '") == "1" || abort("E3004-1: The installed version of firmware is not compatible with this rom."););'
+      info.script.AppendExtra(cmd)
+  return
+
+def AddDisplaySeriesAssertion(info):
+  android_info = info.input_zip.read("OTA/android-info.txt")
+  m = re.search(r'require\s+display-series\s*=\s*(.+)', android_info)
+  if m:
+    series = m.group(1).rstrip()
+    if len(series) and '*' not in series:
+      cmd = ('ui_print("Checking if this device is a \\"' + series + '\\"...");\n' +
+             'assert(getprop("ro.display.series") == "' + series + '" || ' +
+             'abort("E3004-2: This rom runs only on \\"' + series + '\\", ' +
+             'but this device is \\"\" + getprop(\"ro.display.series\") + \"\\"."););\n' +
+             'ui_print(" Confirmed: this device is a \\"\" + getprop(\"ro.display.series\") + \"\\"!!!");')
       info.script.AppendExtra(cmd)
   return
