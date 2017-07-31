@@ -70,3 +70,11 @@ if [ -n "$RADIO_SRC" ]; then
 fi
 
 "$MY_DIR"/setup-makefiles.sh
+
+CAMERA_HAL="$CM_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/lib/hw/camera.msm8996.so
+
+sed -i \
+    -e 's/_ZN7qcamera17QCameraParameters16setQuadraCfaModeEjb/_ZN7qcamera17QCameraParameters16setQuadraCfaModSHIM/' \
+    -e 's/_ZN7qcamera17QCameraParameters12setQuadraCfaERKS0_/_ZN7qcamera17QCameraParameters12setQuadraCfaERSHIM/' \
+    -e 's/_ZN7qcamera17QCameraParameters12getQuadraCfaEv/_ZN7qcamera17QCameraParameters12getQuadraCSHIM/' \
+    "$CAMERA_HAL"
