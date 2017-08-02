@@ -193,6 +193,9 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
     vendor.display.color@1.0-impl
 
+PRODUCT_PROPERTY_OVERRIDES  += \
+    ro.opengles.version=196610
+
 # Display calibration
 PRODUCT_PACKAGES += \
     FOSSConfig.xml \
