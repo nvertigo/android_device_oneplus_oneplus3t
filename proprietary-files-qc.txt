@@ -461,3 +461,9 @@ vendor/lib/mediadrm/libwvdrmengine.so
 # Wifi
 bin/cnss_diag
 bin/cnss-daemon
+
+# For OnePlusCamera 
+-lib/libcameraservice.so
+-lib/libmediaplayerservice.so
+-lib64/libcameraservice.so
+-lib64/libmediaplayerservice.so
