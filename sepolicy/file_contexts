@@ -35,4 +35,4 @@
 /system/bin/remosaic_daemon                                     u:object_r:remosaic_daemon_exec:s0
 
 # bring back busybox
-/system/bin/busybox                   --                        u:object_r:toolbox_exec:s0
+/system/xbin/busybox                   --                        u:object_r:toolbox_exec:s0
