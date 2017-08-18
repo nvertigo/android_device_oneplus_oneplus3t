@@ -203,8 +203,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_op3
 TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)/releasetools
-# custom additions to updater-script
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := $(TARGET_RELEASETOOLS_EXTENSIONS)/ota_from_target_files
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
