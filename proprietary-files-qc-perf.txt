@@ -11,6 +11,8 @@ vendor/etc/perf-profile6.conf
 vendor/lib/libqti-iop-client.so|80ce557584e657a8e815f9778ce04b7ac26c6554
 vendor/lib/libqti-iop.so|9735f0e5cd10c84a9aa518ba85c969e216a3d34d
 vendor/lib/libqti-perfd-client.so|ebbebc024770f299c550747f91dc59834dcbc5cc
+vendor/lib/libqti_performance.so
 vendor/lib64/libqti-iop-client.so|9e8beb4b7da2f156fd1c0ae1b25c29ce12dcf4a5
 vendor/lib64/libqti-iop.so|c29dc3a250adcdaa763226c0b86f1f82901dcb54
 vendor/lib64/libqti-perfd-client.so|272f3868f5790815ede1cab8ef01991fac0eebe4
+vendor/lib64/libqti_performance.so
