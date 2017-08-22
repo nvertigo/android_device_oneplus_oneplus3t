@@ -71,7 +71,6 @@
         <item>eye6:astronomy</item>
         <item>eye7:dynamic</item>
         <item>srgb:srgb</item>
-        <item>dci-p3:dci_p3</item>
     </string-array>
 
     <!-- Should we filter any display modes which are unampped? -->
