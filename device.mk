@@ -26,6 +26,7 @@ $(call inherit-product, vendor/oneplus/oneplus3t/oneplus3t-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage \
     vendor/nlos/overlay
 
 # Permissions
