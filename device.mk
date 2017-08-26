@@ -306,7 +306,7 @@ PRODUCT_PACKAGES += \
 
 # Remove packages
 PRODUCT_PACKAGES += \
-    remove_CMUpdater \
+    remove_Updater \
     remove_power.default
 
 # RIL
