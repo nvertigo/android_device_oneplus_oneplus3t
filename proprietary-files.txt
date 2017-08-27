@@ -462,17 +462,7 @@ etc/sensors/sensor_def_qcomdev.conf
 etc/firmware/a530_gpmu.fw2
 etc/firmware/a530_pfp.fw
 etc/firmware/a530_pm4.fw
-etc/firmware/a530_zap.b00
-etc/firmware/a530_zap.b01
-etc/firmware/a530_zap.b02
-etc/firmware/a530_zap.elf
-etc/firmware/a530_zap.mdt
 # not needed on dedecated builds
-#etc/firmware/a530_zap-pro.b00
-#etc/firmware/a530_zap-pro.b01
-#etc/firmware/a530_zap-pro.b02
-#etc/firmware/a530_zap-pro.elf
-#etc/firmware/a530_zap-pro.mdt
 etc/firmware/a530v1_pfp.fw
 etc/firmware/a530v1_pm4.fw
 etc/firmware/a530v2_seq.fw2
@@ -484,3 +474,18 @@ etc/firmware/tp/fw_synaptics_15801.img
 etc/firmware/tp/fw_synaptics_15801b.img
 etc/firmware/tp/fw_synaptics_15811.img
 etc/firmware/tp/fw_synaptics_touchkey.img
+
+# Display firmware unified hack
+etc/firmware/a530_zap.b00:etc/firmware/a530_zap-pro.b00
+etc/firmware/a530_zap.b01:etc/firmware/a530_zap-pro.b01
+etc/firmware/a530_zap.b02:etc/firmware/a530_zap-pro.b02
+etc/firmware/a530_zap.elf:etc/firmware/a530_zap-pro.elf
+etc/firmware/a530_zap.mdt:etc/firmware/a530_zap-pro.mdt
+
+# Display firmware unified hack - easier to update via script at
+# the end of this file
+etc/firmware/a530_zap.b00|8fbe425d7edcc44808e010495b1256de9dc97623
+etc/firmware/a530_zap.b01|69f94ba766a241883ce635a57159507ed631ce05
+etc/firmware/a530_zap.b02|657ce04bbb8cc88ccead7c22ed1e3ca1776c7518
+etc/firmware/a530_zap.elf|52482ea30a339111b349d299a8d8b16074ee9bd8
+etc/firmware/a530_zap.mdt|76f494e0a2d507c4bb9c21be8ffdfa0ad1368b9d
