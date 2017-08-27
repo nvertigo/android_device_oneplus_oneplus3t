@@ -4,4 +4,3 @@ allow init debugfs:file write;
 allow init proc_touchpanel:file write;
 
 domain_trans(init, rootfs, dashd)
-allow init debugfs:file write;
