@@ -24,7 +24,9 @@
 $(call inherit-product, vendor/oneplus/oneplus3t/oneplus3t-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    vendor/nlos/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -267,6 +269,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
+# NLOS
+PRODUCT_PACKAGES += \
+    NLOSbootanimation.zip \
+    NLOSWallpaperPicker \
+    NLOSlibWallpaperPicker
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -306,7 +314,6 @@ PRODUCT_PACKAGES += \
 
 # Remove packages
 PRODUCT_PACKAGES += \
-    remove_Updater \
     remove_power.default
 
 # RIL
@@ -348,6 +355,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+
+# NLOS
+-include vendor/nlos/nlos.mk
 
 # Inherit from oppo-common
 $(call inherit-product, device/oppo/common/common.mk)
