@@ -269,12 +269,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
-# NLOS
-PRODUCT_PACKAGES += \
-    NLOSbootanimation.zip \
-    NLOSWallpaperPicker \
-    NLOSlibWallpaperPicker
-
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
