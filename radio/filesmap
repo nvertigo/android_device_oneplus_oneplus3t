@@ -41,6 +41,7 @@ devcfg.mbn              /dev/block/bootdevice/by-name/devcfg
 adspso.bin              /dev/block/bootdevice/by-name/dsp
 static_nvbk.bin         /dev/block/bootdevice/by-name/oem_stanvbk
 pmic.elf                /dev/block/bootdevice/by-name/pmic
+logo.bin                /dev/block/bootdevice/by-name/LOGO
 
 # filename + .bak       backup partition
 

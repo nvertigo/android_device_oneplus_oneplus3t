@@ -5,6 +5,7 @@ cmnlib.mbn
 cmnlib64.mbn
 devcfg.mbn
 emmc_appsboot.mbn
+logo.bin
 hyp.mbn
 keymaster.mbn
 NON-HLOS.bin
