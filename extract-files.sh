@@ -42,6 +42,9 @@ while [ "$1" != "" ]; do
         -p | --path )           shift
                                 SRC=$1
                                 ;;
+        -r | --radio-path )     shift
+                                RADIO_SRC=$1
+                                ;;
         -s | --section )        shift
                                 SECTION=$1
                                 CLEAN_VENDOR=false
