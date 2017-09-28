@@ -72,8 +72,12 @@ on enable-low-power
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
 
+    # Online CPU0
+    write /sys/devices/system/cpu/cpu0/online 1
+
     # Configure governor settings for little cluster
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2188800
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
@@ -93,6 +97,7 @@ on enable-low-power
 
     # Configure governor settings for big cluster
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2342400
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_migration_notif 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay "19000 1400000:39000 1700000:19000 2100000:79000"
@@ -107,16 +112,19 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/enable_prediction 1
 
-    # EAS: Capping the max frequency of silver core to 1.6GHz
-    # write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1593600
     # EAS: Set the max frequency of sd821 silver core to 2.2 GHZ
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2188800
-    # EAS: Set the max frequency of sd821 silver core to 2.3 GHZ
+    # EAS: Set the max frequency of sd821 gold core to 2.3 GHZ
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2342400
 
     # if EAS is present, switch to schedutil governor (no effect if not EAS)
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "schedutil"
+
+    # EAS: Set the max frequency of sd821 silver core to 2.2 GHZ
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2188800
+    # EAS: Set the max frequency of sd821 gold core to 2.3 GHZ
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 2342400
 
     # Re-enable thermal and BCL hotplug
     write /sys/module/msm_thermal/core_control/enabled 1
