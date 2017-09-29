@@ -102,32 +102,25 @@ void init_alarm_boot_properties()
     }
 }
 
-void load_op3t(const char *model) {
-    property_set("ro.display.series", "OnePlus 3");
-    property_override("ro.product.model", model);
-    property_override("ro.build.product", "OnePlus3");
-    property_override("ro.product.device", "OnePlus3T");
-}
-
 void vendor_load_properties() {
     int rf_version = stoi(property_get("ro.boot.rf_version"));
 
     switch (rf_version) {
     case 12:
         /* China model */
-        load_op3t("ONEPLUS A3010");
+        property_override("ro.product.model", "ONEPLUS A3010");
         property_set("ro.telephony.default_network", "22");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("persist.radio.force_on_dc", "true");
         break;
     case 22:
         /* Europe / Asia model */
-        load_op3t("ONEPLUS A3003");
+        property_override("ro.product.model", "ONEPLUS A3003");
         property_set("ro.telephony.default_network", "9");
         break;
     case 32:
         /* North America model */
-        load_op3t("ONEPLUS A3000");
+        property_override("ro.product.model", "ONEPLUS A3000");
         property_set("ro.telephony.default_network", "22");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("persist.radio.force_on_dc", "true");
