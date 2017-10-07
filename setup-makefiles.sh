@@ -42,14 +42,15 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 # Copyright headers and guards
 write_headers
 
-write_makefiles "$MY_DIR"/proprietary-files.txt
+# The standard blobs
+write_makefiles "$MY_DIR"/proprietary-files.txt true
 
 # Qualcomm BSP blobs - we put a conditional around here
 # in case the BSP is actually being built
 printf '\n%s\n' "ifeq (\$(QCPATH),)" >> "$PRODUCTMK"
 printf '\n%s\n' "ifeq (\$(QCPATH),)" >> "$ANDROIDMK"
 
-write_makefiles "$MY_DIR"/proprietary-files-qc.txt
+write_makefiles "$MY_DIR"/proprietary-files-qc.txt true
 
 # Qualcomm performance blobs - conditional as well
 # in order to support Cyanogen OS builds
@@ -66,7 +67,7 @@ endif
 ifneq (\$(TARGET_HAVE_QC_PERF),true)
 EOF
 
-write_makefiles "$MY_DIR"/proprietary-files-qc-perf.txt
+write_makefiles "$MY_DIR"/proprietary-files-qc-perf.txt true
 
 echo "endif" >> "$PRODUCTMK"
 
@@ -79,5 +80,5 @@ EOF
 # Append the calls to firmware images
 append_firmware_calls_to_makefiles
 
-# Finish
+# We are done!
 write_footers
