@@ -167,7 +167,8 @@ on enable-low-power
     write /sys/module/lpm_levels/parameters/sleep_disabled "N"
 
     # Set idle GPU to 133 Mhz
-    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 6
+    setprop ro.gpu.available_frequencies "652800000 624000000 560000000 510000000 401800000 315000000 214000000 133000000"
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 7
 
     # Set perfd properties
     setprop sys.post_boot.parsed 1
