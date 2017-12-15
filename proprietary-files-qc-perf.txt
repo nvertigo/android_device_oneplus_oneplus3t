@@ -2,6 +2,12 @@
 -bin/iop|de8c3137dfce758e9cd5f25fe9ccf32075c89869
 -vendor/bin/perfd|01f3154ec4e8bbfc726cbda152689693b91cba71
 vendor/etc/perf-profile0.conf
+vendor/etc/perf-profile1.conf
+vendor/etc/perf-profile2.conf
+vendor/etc/perf-profile3.conf
+vendor/etc/perf-profile4.conf
+vendor/etc/perf-profile5.conf
+vendor/etc/perf-profile6.conf
 -vendor/lib/libqti-iop-client.so|80ce557584e657a8e815f9778ce04b7ac26c6554
 -vendor/lib/libqti-iop.so|9735f0e5cd10c84a9aa518ba85c969e216a3d34d
 -vendor/lib/libqti-perfd-client.so|ebbebc024770f299c550747f91dc59834dcbc5cc
