@@ -15,8 +15,3 @@ allow system_server unlabeled:file unlink;
 
 # OMS
 allow system_server theme_data_file:dir relabelto;
-
-# talk to perfd added by EAS
-allow system_server perfd_data_file:dir search;
-allow system_server perfd_data_file:sock_file write;
-allow system_server perfd:unix_stream_socket connectto;

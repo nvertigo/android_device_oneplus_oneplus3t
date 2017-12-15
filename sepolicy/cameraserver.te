@@ -1,4 +1,2 @@
 allow cameraserver adsprpcd_file:dir { getattr search read };
 allow cameraserver adsprpcd_file:file { getattr read open };
-# perfd added by EAS
-allow cameraserver mpctl_socket:dir search;
