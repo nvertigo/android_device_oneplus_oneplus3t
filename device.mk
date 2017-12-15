@@ -300,13 +300,13 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_op3
-
-# Remove packages
-PRODUCT_PACKAGES += \
-    remove_power.default
 
 # RIL
 PRODUCT_PACKAGES += \
