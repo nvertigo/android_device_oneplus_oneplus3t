@@ -75,10 +75,6 @@ sdm.perf_hint_window=50
 persist.hwc.enable_vds=1
 sdm.debug.disable_rotator_split=1
 
-# IMS
-persist.volte_enabled_by_hw=1
-persist.data.iwlan.enable=true
-
 # NFC
 ro.nfc.port=I2C
 
@@ -139,6 +135,14 @@ ro.sys.sdcardfs=true
 
 # Timeservice
 persist.timed.enable=true
+
+# VoLTE / IMS
+persist.volte_enabled_by_hw=1
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=0
+persist.data.iwlan.enable=true
+persist.dbg.wfc_avail_ovr=0
 
 # Wifi
 wifi.interface=wlan0
