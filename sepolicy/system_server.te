@@ -15,3 +15,12 @@ allow system_server unlabeled:file unlink;
 
 # OMS
 allow system_server theme_data_file:dir relabelto;
+
+# SCHEDBOOST
+allow system_server drmserver:process setsched;
+allow system_server keystore:process setsched;
+allow system_server mediacodec:process setsched;
+allow system_server mediadrmserver:process setsched;
+allow system_server mediaextractor:process setsched;
+allow system_server vold:process setsched;
+allow system_server zygote:process setsched;
