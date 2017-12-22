@@ -15,3 +15,4 @@ allow untrusted_app swap_data_file:dir getattr;
 allow untrusted_app sysfs:file open;
 allow untrusted_app system_block_device:blk_file getattr;
 allow untrusted_app system_data_file:file getattr;
+allow untrusted_app proc_stat:file getattr;
