@@ -7,3 +7,11 @@ allow untrusted_app debugfs:file getattr;
 allow untrusted_app proc_stat:file { open read };
 allow untrusted_app sysfs:file read;
 allow untrusted_app tombstone_data_file:dir search;
+
+allow untrusted_app dm_device:blk_file getattr;
+allow untrusted_app heapdump_data_file:dir getattr;
+allow untrusted_app mpctl_data_file:dir getattr;
+allow untrusted_app swap_data_file:dir getattr;
+allow untrusted_app sysfs:file open;
+allow untrusted_app system_block_device:blk_file getattr;
+allow untrusted_app system_data_file:file getattr;
