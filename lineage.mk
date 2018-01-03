@@ -34,6 +34,8 @@ PRODUCT_BRAND := OnePlus
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
+LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+
 TARGET_VENDOR := oneplus
 
 LOCAL_NLOS_BUILD := oneplus3t
