@@ -33,6 +33,8 @@ PRODUCT_BRAND := OnePlus
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
+LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+
 BUILD_FINGERPRINT := "OnePlus/OnePlus3/OnePlus3:9/PKQ1.181203.001/1907311932:user/release-keys"
 
 TARGET_VENDOR := oneplus
