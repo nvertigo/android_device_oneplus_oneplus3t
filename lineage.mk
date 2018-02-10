@@ -35,3 +35,5 @@ PRODUCT_BRAND := OnePlus
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 TARGET_VENDOR := oneplus
+
+LOCAL_NLOS_BUILD := oneplus3t
