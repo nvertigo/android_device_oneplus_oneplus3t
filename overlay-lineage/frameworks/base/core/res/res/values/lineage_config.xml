@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+<<<<<<< HEAD
      Copyright (C) 2018 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,5 +22,8 @@
     <!-- If enabled, capacitive keys will only light up when pressed.
          Otherwise, the buttons will light up whenever the user interacts with the device -->
     <bool name="config_buttonLightOnKeypressOnly">true</bool>
+
+    <!-- Indicate that this device has Dash Charger -->
+    <bool name="config_hasDashCharger">true</bool>
 
 </resources>
