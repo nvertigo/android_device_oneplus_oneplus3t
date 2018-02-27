@@ -1,0 +1,2 @@
+# Substratum
+allow untrusted_app overlay_service:service_manager find;
