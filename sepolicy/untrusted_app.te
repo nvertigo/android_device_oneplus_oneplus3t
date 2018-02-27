@@ -1,2 +1,41 @@
 # Substratum
 allow untrusted_app overlay_service:service_manager find;
+
+# allow untrusted_apps to find various service managers
+allow untrusted_app DockObserver_service:service_manager find;
+allow untrusted_app battery_service:service_manager find;
+allow untrusted_app cameraproxy_service:service_manager find;
+allow untrusted_app commontime_management_service:service_manager find;
+allow untrusted_app cpuinfo_service:service_manager find;
+allow untrusted_app dbinfo_service:service_manager find;
+allow untrusted_app devicestoragemonitor_service:service_manager find;
+allow untrusted_app gfxinfo_service:service_manager find;
+allow untrusted_app gpu_service:service_manager find;
+allow untrusted_app ifaadaemon_service:service_manager find;
+allow untrusted_app lineage_audio_service:service_manager find;
+allow untrusted_app lineage_hardware_service:service_manager find;
+allow untrusted_app lineage_livedisplay_service:service_manager find;
+allow untrusted_app lineage_performance_service:service_manager find;
+allow untrusted_app lock_settings_service:service_manager find;
+allow untrusted_app meminfo_service:service_manager find;
+allow untrusted_app netd_listener_service:service_manager find;
+allow untrusted_app network_score_service:service_manager find;
+allow untrusted_app network_time_update_service:service_manager find;
+allow untrusted_app oem_lock_service:service_manager find;
+allow untrusted_app otadexopt_service:service_manager find;
+allow untrusted_app overlay_service:service_manager find;
+allow untrusted_app package_native_service:service_manager find;
+allow untrusted_app persistent_data_block_service:service_manager find;
+allow untrusted_app pinner_service:service_manager find;
+allow untrusted_app processinfo_service:service_manager find;
+allow untrusted_app recovery_service:service_manager find;
+allow untrusted_app remosaic_service:service_manager find;
+allow untrusted_app rootfs:dir { open read };
+allow untrusted_app scheduling_policy_service:service_manager find;
+allow untrusted_app serial_service:service_manager find;
+allow untrusted_app storaged_service:service_manager find;
+allow untrusted_app thermal_service:service_manager find;
+allow untrusted_app updatelock_service:service_manager find;
+allow untrusted_app wificond_service:service_manager find;
+allow untrusted_app wifiscanner_service:service_manager find;
+allow untrusted_app window_service:service_manager find;
