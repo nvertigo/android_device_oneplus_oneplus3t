@@ -5,3 +5,5 @@ allow system_app sysfs_fpc:file write;
 
 binder_call(system_app, ifaadaemon)
 binder_call(system_app, remosaic_daemon)
+
+allow system_app wificond:binder call;
