@@ -106,7 +106,7 @@ vendor/lib/libmmcamera_hvx_grid_sum.so
 vendor/lib/libmmcamera_hvx_zzHDR.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
 vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_imx179.so|a98a9d3f30a97deae272246ba68d108b2b20775c
+vendor/lib/libmmcamera_imx179.so
 vendor/lib/libmmcamera_imx298.so
 vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_optizoom_lib.so
@@ -137,7 +137,7 @@ vendor/lib/libmmcamera2_imglib_modules.so
 vendor/lib/libmmcamera2_is.so
 vendor/lib/libmmcamera2_isp_modules.so
 vendor/lib/libmmcamera2_mct_shimlayer.so
-vendor/lib/libmmcamera2_mct.so|f6925bd51beb8d4ce463179d8af01483768d85db
+vendor/lib/libmmcamera2_mct.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
