@@ -117,7 +117,7 @@ vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libmmcamera_quadracfa.so
 vendor/lib/libmmcamera_s5k3p8.so
 vendor/lib/libmmcamera_s5k3p8sp_m24c64s_eeprom.so
-vendor/lib/libmmcamera_s5k3p8sp.so|001316279415c21fb08fbfd87422a85fd2a876c2
+vendor/lib/libmmcamera_s5k3p8sp.so
 vendor/lib/libmmcamera_sony_imx179_eeprom.so
 vendor/lib/libmmcamera_sony_imx298_eeprom.so
 vendor/lib/libmmcamera_stillmore_lib.so
