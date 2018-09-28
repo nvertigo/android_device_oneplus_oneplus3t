@@ -1,2 +1,2 @@
-require version-modem=2018-08-16 14:45:44
+require version-modem=2018-08-16 14:30:59
 require version-firmware=OxygenOS 5.0.5
