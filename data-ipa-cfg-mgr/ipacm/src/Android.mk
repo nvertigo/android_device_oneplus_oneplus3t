@@ -41,6 +41,7 @@ filetoadd = bionic/libc/kernel/arch-arm/asm/posix_types.h
 LOCAL_CFLAGS += $(shell if [ -a $(filetoadd) ] ; then echo -include $(filetoadd) ; fi ;)
 filetoadd = bionic/libc/kernel/arch-arm/asm/byteorder.h
 LOCAL_CFLAGS += $(shell if [ -a $(filetoadd) ] ; then echo -include $(filetoadd) ; fi ;)
+LOCAL_CFLAGS += -Wno-enum-compare
 
 
 LOCAL_SRC_FILES := IPACM_Main.cpp \
