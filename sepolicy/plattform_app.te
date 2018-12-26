@@ -1,0 +1,6 @@
+
+
+#============= platform_app ==============
+
+#!!!! This avc is allowed in the current policy
+allow platform_app app_data_file:file execute;
