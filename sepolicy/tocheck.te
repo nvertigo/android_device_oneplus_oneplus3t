@@ -7,16 +7,26 @@ allow adbd ctl_start_prop:property_service set;
 allow dnsmasq netd:unix_stream_socket getattr;
 
 #============= dpmd ==============
-allow dpmd sysfs:file read;
+allow dpmd sysfs:file { open read };
+
+#============= hal_memtrack_default ==============
+allow hal_memtrack_default debugfs:file { getattr open read };
 
 #============= hal_nfc_default ==============
 allow hal_nfc_default default_android_hwservice:hwservice_manager find;
 
+#============= hal_perf_default ==============
+allow hal_perf_default mediacodec:process signull;
+
 #============= init ==============
 allow init sysfs:file setattr;
+allow init system_file:dir relabelfrom;
 
 #============= isolated_app ==============
 allow isolated_app app_data_file:dir getattr;
+
+#============= netutils_wrapper ==============
+allow netutils_wrapper netmgrd:socket { read write };
 
 #============= priv_app ==============
 allow priv_app mnt_vendor_file:dir search;
@@ -84,13 +94,8 @@ allow untrusted_app_25 rootfs:dir read;
 #============= untrusted_app_27 ==============
 allow untrusted_app_27 anr_data_file:dir read;
 allow untrusted_app_27 hal_memtrack_hwservice:hwservice_manager find;
-allow untrusted_app_27 kgsl_debugfs:file read;
-allow untrusted_app_27 proc:file read;
+allow untrusted_app_27 proc:file { getattr open read };
 allow untrusted_app_27 proc_version:file read;
-
-
-#============= location ==============
-allow location wcnss_prop:file { getattr open read };
 
 #============= priv_app ==============
 allow priv_app device:dir open;
