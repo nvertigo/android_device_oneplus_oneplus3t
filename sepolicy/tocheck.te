@@ -15,14 +15,14 @@ allow hal_perf_default mediacodec:process signull;
 #============= init ==============
 allow init sysfs:file setattr;
 
+#============= vendor_init ==============
+allow vendor_init proc_touchpanel:file write;
+
 #============= isolated_app ==============
 allow isolated_app app_data_file:dir getattr;
 
 #============= netutils_wrapper ==============
 allow netutils_wrapper netmgrd:socket { read write };
-
-#============= priv_app ==============
-allow priv_app sysfs:file read;
 
 #============= untrusted_app ==============
 allow untrusted_app DockObserver_service:service_manager find;
@@ -67,21 +67,37 @@ allow untrusted_app updatelock_service:service_manager find;
 allow untrusted_app wificond_service:service_manager find;
 allow untrusted_app wifiscanner_service:service_manager find;
 allow untrusted_app window_service:service_manager find;
+allow untrusted_app adb_data_file:dir getattr;
+allow untrusted_app adbd_exec:file getattr;
+allow untrusted_app apk_private_data_file:dir getattr;
+allow untrusted_app asec_image_file:dir getattr;
+allow untrusted_app backup_data_file:dir getattr;
+allow untrusted_app bootchart_data_file:dir getattr;
+allow untrusted_app device:chr_file getattr;
+allow untrusted_app device:dir read;
+allow untrusted_app device:file getattr;
+allow untrusted_app drm_data_file:dir getattr;
+allow untrusted_app ifaadaemon_service:service_manager find;
+allow untrusted_app install_data_file:file getattr;
+allow untrusted_app mnt_media_rw_file:dir getattr;
+allow untrusted_app mnt_product_file:dir getattr;
 
 #============= untrusted_app_25 ==============
-allow untrusted_app_25 rootfs:dir read;
+allow untrusted_app_25 rootfs:dir { open read };
+allow untrusted_app_25 debugfs_wakeup_sources:file { getattr open };
 
 #============= priv_app ==============
 allow priv_app device:dir open;
 allow priv_app proc:file { getattr open };
 allow priv_app proc_interrupts:file open;
-allow priv_app sysfs:file open;
+allow priv_app sysfs:file { open read };
 allow priv_app sysfs_android_usb:file open;
-
-#============= untrusted_app_25 ==============
-allow untrusted_app_25 debugfs_wakeup_sources:file { getattr open };
-allow untrusted_app_25 rootfs:dir open;
 
 #============= untrusted_app_27 ==============
 allow untrusted_app_27 hal_memtrack_default:binder call;
 allow platform_app radio_data_file:dir getattr;
+
+#============= system_app ==============
+allow system_app proc_pagetypeinfo:file { getattr open read };
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file read;
