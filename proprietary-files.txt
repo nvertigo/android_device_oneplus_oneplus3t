@@ -923,10 +923,10 @@ vendor/firmware/a530_zap.b02:vendor/firmware/a530_zap-pro.b02
 vendor/firmware/a530_zap.elf:vendor/firmware/a530_zap-pro.elf
 vendor/firmware/a530_zap.mdt:vendor/firmware/a530_zap-pro.mdt
 vendor/firmware/a530_zap.b00
-vendor/firmware/a530_zap.b01|ee9d73d00685ff8869cfa0da2a65453191837751
+vendor/firmware/a530_zap.b01|a1c8bd90d2e1426b3a30006b0431d32fda59d8ff
 vendor/firmware/a530_zap.b02
-vendor/firmware/a530_zap.elf|e9eb2a0719d442a3b2f71bda6d515ccf8793441e
-vendor/firmware/a530_zap.mdt|85b7b1ce10ec5ecc369327ad77bbfdc859afc6a2
+vendor/firmware/a530_zap.elf|228ea5f722a2303b27a6a7db8c49037194dab963
+vendor/firmware/a530_zap.mdt|e7db881dbb0d605db76dd432f83a53f22ff41680
 vendor/firmware/a530v1_pfp.fw
 vendor/firmware/a530v1_pm4.fw
 vendor/firmware/a530v2_seq.fw2

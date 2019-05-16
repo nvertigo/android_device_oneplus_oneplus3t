@@ -77,7 +77,6 @@ allow untrusted_app device:chr_file getattr;
 allow untrusted_app device:dir read;
 allow untrusted_app device:file getattr;
 allow untrusted_app drm_data_file:dir getattr;
-allow untrusted_app ifaadaemon_service:service_manager find;
 allow untrusted_app install_data_file:file getattr;
 allow untrusted_app mnt_media_rw_file:dir getattr;
 allow untrusted_app mnt_product_file:dir getattr;
