@@ -14,6 +14,7 @@ allow hal_perf_default mediacodec:process signull;
 
 #============= init ==============
 allow init sysfs:file setattr;
+allow init sysfs_dm:file { open write };
 
 #============= vendor_init ==============
 allow vendor_init proc_touchpanel:file write;
@@ -91,6 +92,8 @@ allow priv_app proc:file { getattr open };
 allow priv_app proc_interrupts:file open;
 allow priv_app sysfs:file { open read };
 allow priv_app sysfs_android_usb:file open;
+allow priv_app bt_firmware_file:filesystem getattr;
+allow priv_app firmware_file:filesystem getattr;
 
 #============= untrusted_app_27 ==============
 allow untrusted_app_27 hal_memtrack_default:binder call;
@@ -99,4 +102,7 @@ allow platform_app radio_data_file:dir getattr;
 #============= system_app ==============
 allow system_app proc_pagetypeinfo:file { getattr open read };
 allow system_app sysfs_zram:dir search;
-allow system_app sysfs_zram:file read;
+allow system_app sysfs_zram:file { getattr open read };
+
+#============= webview_zygote ==============
+allow webview_zygote zygote:unix_dgram_socket write;
