@@ -86,6 +86,9 @@ allow untrusted_app mnt_product_file:dir getattr;
 allow untrusted_app_25 rootfs:dir { open read };
 allow untrusted_app_25 debugfs_wakeup_sources:file { getattr open };
 
+#============= untrusted_app_27 ==============
+allow untrusted_app_27 hal_memtrack_default:binder call;
+
 #============= priv_app ==============
 allow priv_app device:dir open;
 allow priv_app proc:file { getattr open };
@@ -95,8 +98,7 @@ allow priv_app sysfs_android_usb:file open;
 allow priv_app bt_firmware_file:filesystem getattr;
 allow priv_app firmware_file:filesystem getattr;
 
-#============= untrusted_app_27 ==============
-allow untrusted_app_27 hal_memtrack_default:binder call;
+#============= platform_app ==============
 allow platform_app radio_data_file:dir getattr;
 
 #============= system_app ==============

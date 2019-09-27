@@ -1,0 +1,36 @@
+
+
+#============= hal_fingerprint_default ==============
+allow hal_fingerprint_default proc_touchpanel:dir search;
+allow hal_fingerprint_default sysfs_leds:dir search;
+
+#============= untrusted_app ==============
+allow untrusted_app adb_keys_file:dir getattr;
+allow untrusted_app audioserver_data_file:dir getattr;
+allow untrusted_app bluetooth_data_file:dir getattr;
+allow untrusted_app bootstat_data_file:dir getattr;
+allow untrusted_app boottrace_data_file:dir getattr;
+allow untrusted_app camera_data_file:dir getattr;
+allow untrusted_app cnd_data_file:dir getattr;
+allow untrusted_app debugfs:dir read;
+allow untrusted_app debugfs:file getattr;
+allow untrusted_app fingerprint_vendor_data_file:dir getattr;
+allow untrusted_app fingerprintd_data_file:dir getattr;
+allow untrusted_app heapdump_data_file:dir getattr;
+allow untrusted_app init_exec:file getattr;
+allow untrusted_app ota_package_file:dir getattr;
+allow untrusted_app radio_data_file:dir getattr;
+allow untrusted_app rootfs:dir read;
+allow untrusted_app rootfs:file getattr;
+allow untrusted_app sysfs_kgsl_proc:dir search;
+allow untrusted_app system_app_data_file:dir getattr;
+allow untrusted_app system_data_file:dir { read };
+allow untrusted_app system_data_file:file { open };
+allow untrusted_app vendor_audio_data_file:dir getattr;
+allow untrusted_app vendor_bt_data_file:dir getattr;
+allow untrusted_app vendor_camera_data_file:dir getattr;
+allow untrusted_app vendor_qti_data_file:dir getattr;
+allow untrusted_app vendor_radio_data_file:dir search;
+
+#============= untrusted_app_27 ==============
+allow untrusted_app_27 sysfs_net:dir search;
