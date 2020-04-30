@@ -24,9 +24,6 @@
 # Inherit from oppo-common
 -include device/oppo/common/BoardConfigCommon.mk
 
-# work around removed ANDROID_BUILD_TOP
-MY_ANDROID_BUILD_TOP := /usr/local/src/los16
-
 PLATFORM_PATH := device/oneplus/oneplus3
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
@@ -73,7 +70,7 @@ BOARD_RAMDISK_OFFSET     := 0x02200000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8996
 TARGET_KERNEL_CONFIG := lineageos_oneplus3_defconfig
-KERNEL_TOOLCHAIN := $(MY_ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-7.3/bin
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-7.3/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
